@@ -15,7 +15,10 @@ Route::get('/register', function () {
 });
 
 Route::get('/home', function () {
-    return view('index
-    ');
+    return view('index');
+});
+
+Route::get('/saved', function () {
+    return view('saved');
 });
 
