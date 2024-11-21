@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-900 flex items-center justify-center h-screen">
-    <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+@extends('layout.layout')
+
+@section('title', 'Register')
+
+@section('content')
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md mx-au to">
         <h2 class="text-2xl font-bold mb-6 text-center text-white">Register</h2>
         <form action="/register" method="POST">
             @csrf
@@ -33,5 +29,4 @@
             </div>
         </form>
     </div>
-</body>
-</html>
+@endsection
