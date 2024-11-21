@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Log;
+use App\Models\UserProject;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,13 +14,17 @@ Route::get('/login', function () {
 });
 
 Route::get('/register', function () {
-    Log::info('GET /register route hit');
     return view('register');
 });
 
 Route::post('/register', function () {
-    Log::info('POST /register route hit');
-    return app(RegisterController::class)->register(request());
+    $NewUser = new UserProject();
+    $NewUser->name = request('name');
+    $NewUser->email = request('email');
+    $NewUser->password = request('password');
+    $NewUser->save();
+
+    return redirect('/login')->with('success', 'Registration successful. Please login.');
 });
 
 Route::get('/home', function () {

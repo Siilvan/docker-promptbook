@@ -3,7 +3,7 @@
 @section('title', 'Register')
 
 @section('content')
-    <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md mx-auto">
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md mx-au to">
         <h2 class="text-2xl font-bold mb-6 text-center text-white">Register</h2>
         <form action="/register" method="POST">
             @csrf

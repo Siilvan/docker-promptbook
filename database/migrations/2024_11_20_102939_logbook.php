@@ -16,6 +16,14 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
         });
+
+        Schema::create('UserProject', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->timestamps();
+        });
         
 
         // Table for prompt fragments
@@ -89,5 +97,6 @@ return new class extends Migration
         Schema::dropIfExists('tag');
         Schema::dropIfExists('prompt_fragment');
         Schema::dropIfExists('author');
+        Schema::dropIfExists('users');
     }
 };
