@@ -19,8 +19,8 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/login', function () {
-    return view('inlog');
+Route::get('auth/login', function () {
+    return view('login');
 });
 
 Route::get('/register', function () {
@@ -33,4 +33,8 @@ Route::get('/home', function () {
 
 Route::get('/saved', function () {
     return view('saved');
+});
+
+Route::get('/save', function () {
+    return view('savenew');
 });
