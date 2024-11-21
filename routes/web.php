@@ -17,4 +17,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+
+use App\Http\Controllers\PostController;
+
+Route::get('/composites/create', [PostController::class, 'create']); // Show form
+Route::post('/composites', [PostController::class, 'store']); // Handle form submission
+
+
+require __DIR__ . '/auth.php';
