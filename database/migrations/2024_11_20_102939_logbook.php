@@ -17,8 +17,6 @@ return new class extends Migration
             $table->string('name')->unique();
         });
 
-<<<<<<< HEAD
-=======
         Schema::create('UserProject', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -28,7 +26,6 @@ return new class extends Migration
         });
         
 
->>>>>>> connection-database
         // Table for prompt fragments
         Schema::create('prompt_fragment', function (Blueprint $table) {
             $table->id();
@@ -100,11 +97,6 @@ return new class extends Migration
         Schema::dropIfExists('tag');
         Schema::dropIfExists('prompt_fragment');
         Schema::dropIfExists('author');
-<<<<<<< HEAD
-    }
-};
-=======
         Schema::dropIfExists('users');
     }
 };
->>>>>>> connection-database
