@@ -18,3 +18,19 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/login', function () {
+    return view('inlog');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/home', function () {
+    return view('index');
+});
+
+Route::get('/saved', function () {
+    return view('saved');
+});
