@@ -29,7 +29,7 @@ return new class extends Migration
         // Table for prompt fragments
         Schema::create('prompt_fragment', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('author_id')->constrained('author')->onDelete('cascade');
+            $table->foreignId('author_id');
             $table->text('content');
             $table->text('description')->nullable();
             $table->timestamps();
@@ -51,7 +51,7 @@ return new class extends Migration
         // Table for composite prompts
         Schema::create('composite_prompt', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('author_id')->constrained('author')->onDelete('cascade');
+            $table->foreignId('author_id');
             $table->string('title');
             $table->text('description')->nullable();
             $table->timestamps();

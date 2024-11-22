@@ -3,9 +3,15 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/loggedin', function () {
+    return view('loggedin');
+})->name('loggedin');
+
+Route::get('/pagetwo', function () {
+    return view('pagetwo');
+})->name('pagetwo');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
