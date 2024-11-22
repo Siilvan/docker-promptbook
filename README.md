@@ -6,7 +6,7 @@
 -   [Serving](#serving)
 
 ## About
-Is Docker EN Laravel maar de docker interact niet met de Laravel
+Docker + Laravel prompt book
 
 ## Installation
 
