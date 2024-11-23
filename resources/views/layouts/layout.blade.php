@@ -10,14 +10,10 @@
     <nav class="bg-gray-800 p-4">
         <div class="container mx-auto flex justify-between items-center">
             <a href="/" class="text-2xl font-bold">PromptSaver</a>
-            <div>
-                <a href="/" class="text-blue-500 hover:text-blue-700 mx-2">Home</a>
-                <a href="/login" class="text-blue-500 hover:text-blue-700 mx-2">Login</a>
-                <a href="/register" class="text-blue-500 hover:text-blue-700 mx-2">Register</a>
-            </div>
+    
         </div>
     </nav>
-    <div class="container mx-auto p-8">
+    <div class="container mx-auto p-8 ">
         @yield('content')
     </div>
 </body>
